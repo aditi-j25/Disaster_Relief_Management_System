@@ -1,0 +1,61 @@
+<translations>
+  <translation>
+    <key>menu_title</key>
+    <value>Disaster Relief Management System</value>
+  </translation>
+
+  <translation>
+    <key>view_victims</key>
+    <value>View all disaster victims</value>
+  </translation>
+
+  <translation>
+    <key>search_victim</key>
+    <value>Search for a victim</value>
+  </translation>
+
+  <translation>
+    <key>log_inquiry</key>
+    <value>Log an inquiry</value>
+  </translation>
+
+  <translation>
+    <key>exit</key>
+    <value>Exit</value>
+  </translation>
+
+  <translation>
+    <key>goodbye</key>
+    <value>Goodbye!</value>
+  </translation>
+
+  <translation>
+    <key>invalid_option</key>
+    <value>Invalid option, please try again.</value>
+  </translation>
+
+  <translation>
+    <key>list_victims</key>
+    <value>List of Disaster Victims:</value>
+  </translation>
+
+  <translation>
+    <key>input_firstname</key>
+    <value>Enter the person's first name:</value>
+  </translation>
+
+  <translation>
+    <key>input_lastname</key>
+    <value>Enter the person's last name:</value>
+  </translation>
+
+  <translation>
+    <key>no_results</key>
+    <value>No results found.</value>
+  </translation>
+
+  <translation>
+    <key>inquiry_logged</key>
+    <value>Inquiry successfully logged.</value>
+  </translation>
+</translations>
