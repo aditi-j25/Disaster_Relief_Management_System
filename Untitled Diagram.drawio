@@ -1,9 +1,69 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.1.0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.0">
   <diagram name="Page-1" id="cXjRx7w3tMJetYW6QLwl">
-    <mxGraphModel>
+    <mxGraphModel dx="2386" dy="2355" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="6_JOSyZvCHOYuresc59k-1" value="Person" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-847" y="-1242" width="205" height="339" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-2" value="- int personID&lt;div&gt;- String firstName&lt;/div&gt;&lt;div&gt;- String lastName&lt;/div&gt;&lt;div&gt;- String dateOfBirth&lt;/div&gt;&lt;div&gt;- String gender&lt;/div&gt;&lt;div&gt;- String comments&lt;/div&gt;&lt;div&gt;- int phoneNumber&lt;/div&gt;&lt;div&gt;- int familyGroup&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-1">
+          <mxGeometry y="26" width="205" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6_JOSyZvCHOYuresc59k-1">
+          <mxGeometry y="173" width="205" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-4" value="+ Person(int personID,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String firstName,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String lastName,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String dateOfBirth,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String gender,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String comments,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int phoneNumber,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int familyGroup&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-1">
+          <mxGeometry y="181" width="205" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-5" value="Location" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-547" y="-1157" width="185" height="231" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-6" value="- int locationID&lt;div&gt;- String name&amp;nbsp;&lt;/div&gt;&lt;div&gt;- String address&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-5">
+          <mxGeometry y="26" width="185" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6_JOSyZvCHOYuresc59k-5">
+          <mxGeometry y="117" width="185" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-8" value="+ Location(int locationID,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String name,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String address)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-5">
+          <mxGeometry y="125" width="185" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-9" value="Inquiry" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-867" y="-889" width="220" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-10" value="- int inquiyID&lt;div&gt;- int inquirerID&lt;/div&gt;&lt;div&gt;- int seekingID&lt;/div&gt;&lt;div&gt;- int locationID&lt;/div&gt;&lt;div&gt;- String dateOfInquiry&lt;/div&gt;&lt;div&gt;- String comments&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-9">
+          <mxGeometry y="26" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6_JOSyZvCHOYuresc59k-9">
+          <mxGeometry y="131" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-12" value="+ Inquiry(int inquiyID,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int inquirerID,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int seekingID,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int locationID,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String dateOfInquiry,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String comments)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-9">
+          <mxGeometry y="139" width="220" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-13" value="Supply" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-536" y="-904" width="212" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-14" value="- int supplyID&lt;div&gt;- String type&lt;/div&gt;&lt;div&gt;- String comments&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-13">
+          <mxGeometry y="26" width="212" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6_JOSyZvCHOYuresc59k-13">
+          <mxGeometry y="133" width="212" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-16" value="+ Supply(int supplyID,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String type,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String comments)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-13">
+          <mxGeometry y="141" width="212" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-17" value="MedicalRecord" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-847" y="-585" width="224" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-18" value="- int medicalRecordID&lt;div&gt;- int locationID&lt;/div&gt;&lt;div&gt;- int personID&lt;/div&gt;&lt;div&gt;- int dateOfTreatment&lt;/div&gt;&lt;div&gt;- String treatmentDetails&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-17">
+          <mxGeometry y="26" width="224" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6_JOSyZvCHOYuresc59k-17">
+          <mxGeometry y="140" width="224" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6_JOSyZvCHOYuresc59k-20" value="+ MedicalRecord(int medicalRecordID,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int locationID,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int personID,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int dateOfTreatment,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String treatmentDetails)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6_JOSyZvCHOYuresc59k-17">
+          <mxGeometry y="148" width="224" height="127" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
