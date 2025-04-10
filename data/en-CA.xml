@@ -1,61 +1,589 @@
 <translations>
-  <translation>
-    <key>menu_title</key>
-    <value>Disaster Relief Management System</value>
-  </translation>
+    <!-- Main menu options -->
+    <translation>
+        <key>Welcome to the Disaster Relief Management System</key>
+        <value>Welcome to the Disaster Relief Management System</value>
+    </translation>
+    <translation>
+        <key>Please select an option from the menu below:</key>
+        <value>Please select an option from the menu below:</value>
+    </translation>
+    <translation>
+        <key>Add a Disaster victim</key>
+        <value>Add a Disaster victim</value>
+    </translation>
+    <translation>
+        <key>View Disaster victim information</key>
+        <value>View Disaster victim information</value>
+    </translation>
+    <translation>
+        <key>Edit Disaster victim information</key>
+        <value>Edit Disaster victim information</value>
+    </translation>    
+    <translation>
+        <key>Log an inquiry about a victim</key>
+        <value>Log an inquiry about a victim</value>
+    </translation>
+    <translation>
+        <key>View inquiries about victims</key>
+        <value>View inquiries about victims</value>
+    </translation>
+    <translation>
+        <key>Edit inquiries about victims</key>
+        <value>Edit inquiries about victims</value>
+    </translation>
+    <translation>
+        <key>Allocate available supplies</key>
+        <value>Allocate available supplies</value>
+    </translation>
+    <translation>
+        <key>View current supply inventory and allocations</key>
+        <value>View current supply inventory and allocations</value>
+    </translation>
+    <translation>
+        <key>Edit supply inventory and allocations</key>
+        <value>Edit current supply inventory and allocations</value>
+    </translation>
+    <translation>
+        <key>Exit the system</key>
+        <value>Exit the system</value>
+    </translation>
+    <translation>
+        <key>menu_prompt</key>
+        <value>Enter your choice: </value>
+    </translation>
+    <translation>
+        <key>exit_message</key>
+        <value>Thank you for using the Disaster Relief Management System.</value>
+    </translation>
+    <translation>
+        <key>invalid_choice</key>
+        <value>Invalid choice. Please try again.</value>
+    </translation>
+	<translation>
+		<key>adding_victim_info</key>
+		<value>Adding Disaster Victim...........</value>
+	</translation>	
+	<translation>
+		<key>viewing_victim_info</key>
+		<value>Viewing Disaster Victim...........</value>
+	</translation>
+	<translation>
+		<key>editing_victim_info</key>
+		<value>Editing Disaster Victim...........</value>
+	</translation>
+	<translation>
+		<key>loging_inquiry</key>
+		<value>Logging Inquiry...........</value>
+	</translation>
+	<translation>
+		<key>inquirer_not_found</key>
+		<value>No valid inquirer selected. Returning to the main menu."</value>
+	</translation>
+	<translation>
+		<key>viewing_inquiry</key>
+		<value>Viewing Inquiry...........</value>
+	</translation>
+	<translation>
+		<key>editing_inquiry</key>
+		<value>Editing Inquiry...........</value>
+	</translation>
+	<translation>
+		<key>allocating_supplies</key>
+		<value>Allocating supplies...</value>
+	</translation>
+	<translation>
+		<key>viewing_supplies</key>
+		<value>"Viewing supplies..."</value>
+	</translation>
+	<translation>
+		<key>editing_supplies</key>
+		<value>"Editing supplies..."</value>
+	</translation>	
+	
+    <!-- Person information inputs -->
+    <translation>
+        <key>input_firstname</key>
+        <value>Enter the person's first name: </value>
+    </translation>
+    <translation>
+        <key>input_lastname</key>
+        <value>Enter the person's last name: </value>
+    </translation>
+    <translation>
+        <key>input_phone</key>
+        <value>Enter the person's phone number: </value>
+    </translation>
+    <translation>
+        <key>input_dob</key>
+        <value>Enter the person's date of birth (YYYY-MM-DD): </value>
+    </translation>
+    <translation>
+        <key>select_gender</key>
+        <value>Select the person's gender: </value>
+    </translation>
+    <translation>
+        <key>gender_man</key>
+        <value>Man</value>
+    </translation>
+    <translation>
+        <key>gender_woman</key>
+        <value>Woman</value>
+    </translation>
+    <translation>
+        <key>gender_nb</key>
+        <value>Non-binary person</value>
+    </translation>
+    <translation>
+    	<key>available_locations</key>
+    	<value>Please choose the location from below </value>
+    </translation>
+    <!-- Input validation error messages -->
+    <translation>
+        <key>invalid_firstname</key>
+        <value>Invalid first name. Please try again.</value>
+    </translation>
+    <translation>
+        <key>invalid_lastname</key>
+        <value>Invalid last name. Please try again.</value>
+    </translation>
+    <translation>
+        <key>invalid_phone_format</key>
+        <value>Invalid phone number. Must be exactly 10 digits.</value>
+    </translation>
+    <translation>
+        <key>invalid_yes_no</key>
+        <value>Please enter 'yes' or 'no'.</value>
+    </translation>
+    <translation>
+        <key>invalid_input</key>
+        <value>Invalid input. Please try again.</value>
+    </translation>
+	<translation>
+        <key>invalid_gender</key>
+        <value>Invalid gender selection. Please try again.</value>
+    </translation>
+    <translation>
+        <key>invalid_dob</key>
+        <value>Invalid date format. Please use YYYY-MM-DD format.</value>
+    </translation>
+    <translation>
+    	<key>invalid_phone</key>
+    	<value>Invalid phone number. Please enter the correct 10 digit number.</value>
+    </translation>
+    
+    <!-- Comment section -->
+    <translation>
+        <key>input_comments</key>
+        <value>Enter any comments about this disaster victim (press Enter on an empty line to finish):</value>
+    </translation>
+    <translation>
+        <key>multiline_instruction</key>
+        <value>Type your comments, then press Enter on an empty line when finished.</value>
+    </translation>
+    <translation>
+        <key>no_comments</key>
+        <value>No comments provided.</value>
+    </translation>
 
-  <translation>
-    <key>view_victims</key>
-    <value>View all disaster victims</value>
-  </translation>
+    <!-- Family group options -->
+    <translation>
+        <key>join_family_group</key>
+        <value>Would you like to add this person to an existing family group? (y/n): </value>
+    </translation>
+    <translation>
+        <key>select_family_group</key>
+        <value>Select a family group ID: </value>
+    </translation>
+    <translation>
+        <key>invalid_family_group</key>
+        <value>Invalid family group ID. Using a new family group.The family group number is right after the current one. </value>
+    </translation>
+    <translation>
+        <key>invalid_y_n</key>
+        <value>Invalid input. Please enter 'y' or 'n'.</value>
+    </translation>
+    <translation>
+        <key>no_family_group</key>
+        <value>No family group assigned</value>
+    </translation>
 
-  <translation>
-    <key>search_victim</key>
-    <value>Search for a victim</value>
-  </translation>
+    <!-- Location related messages -->
+    <translation>
+        <key>select_location</key>
+        <value>Select a location ID: </value>
+    </translation>
+    <translation>
+        <key>invalid_location</key>
+        <value>Invalid location ID. Please try again.</value>
+    </translation>
 
-  <translation>
-    <key>log_inquiry</key>
-    <value>Log an inquiry</value>
-  </translation>
+    <!-- Table headers and formatting -->
+    <translation>
+        <key>victim_details_header</key>
+        <value>DISASTER VICTIM DETAILS</value>
+    </translation>
+    <translation>
+        <key>victim_list_header</key>
+        <value>LIST OF REGISTERED DISASTER VICTIMS</value>
+    </translation>
+    <translation>
+        <key>table_id</key>
+        <value>ID</value>
+    </translation>
+    <translation>
+        <key>table_name</key>
+        <value>Name</value>
+    </translation>
+    <translation>
+        <key>table_phone</key>
+        <value>Phone</value>
+    </translation>
+    <translation>
+        <key>table_dob</key>
+        <value>Date of Birth</value>
+    </translation>
+    <translation>
+        <key>table_gender</key>
+        <value>Gender</value>
+    </translation>
+    <translation>
+        <key>table_location</key>
+        <value>Current Location</value>
+    </translation>
+    <translation>
+        <key>table_family_group</key>
+        <value>Family Group</value>
+    </translation>
+    <translation>
+        <key>table_comments_header</key>
+        <value>COMMENTS</value>
+    </translation>
 
-  <translation>
-    <key>exit</key>
-    <value>Exit</value>
-  </translation>
+    <!-- Success messages -->
+    <translation>
+        <key>victim_added</key>
+        <value>Disaster victim %s %s has been added successfully.</value>
+    </translation>
+    <translation>
+        <key>inquiry_logged</key>
+        <value>Inquiry has been logged successfully.</value>
+    </translation>
 
-  <translation>
-    <key>goodbye</key>
-    <value>Goodbye!</value>
-  </translation>
+    <!-- Inquiry related messages -->
+    <translation>
+        <key>inquiry_type</key>
+        <value>Is this inquiry from an external person or a disaster victim? </value>
+    </translation>
+    <translation>
+        <key>select_inquirer</key>
+        <value>Select the ID of the person making the inquiry: </value>
+    </translation>
+    <translation>
+        <key>select_subject</key>
+        <value>Select the ID of the person being inquired about: </value>
+    </translation>
+    <translation>
+        <key>inquiry_details</key>
+        <value>Enter the details of the inquiry: </value>
+    </translation>
+    <translation>
+        <key>invalid_person</key>
+        <value>Invalid person ID. Please try again.</value>
+    </translation>
+    
+    <!-- Inquirer -->
+    <!--Table headers-->
+    <translation>
+        <key>inquirer_table_header</key>
+        <value>INQUIRER INFORMATION</value>
+    </translation>
+    <translation>
+        <key>inquirer_table_id</key>
+        <value>ID</value>
+    </translation>
+    <translation>
+        <key>inquirer_table_name</key>
+        <value>Inquirer's Name</value>
+    </translation>
+    <translation>
+        <key>inquirer_table_message</key>
+        <value>Inquiry Message</value>
+    </translation>
+    <translation>
+    	<key>input_edit_inquiry</key>
+    	<value>Please enter the edited inquiry</value>
+    </translation>
+    
+    <!-- Default message when inquiry is missing -->
+    <translation>
+        <key>no_message</key>
+        <value>No message</value>
+    </translation>
+    <!-- Inquirer creation inputs -->
+    <translation>
+        <key>inquirer_firstname</key>
+        <value>Enter first name: </value>
+    </translation>
+    <translation>
+        <key>inquirer_lastname</key>
+        <value>Enter last name: </value>
+    </translation>
+    <translation>
+        <key>inquirer_phone</key>
+        <value>Enter phone number (10 digits): </value>
+    </translation>
+    <translation>
+        <key>inquirer_message</key>
+        <value>Enter inquiry message: </value>
+    </translation>
+    <translation>
+        <key>empty_message</key>
+        <value>Inquiry message cannot be empty.</value>
+    </translation>
+    <translation>
+        <key>inquirer_is_victim</key>
+        <value>Is this inquirer a victim? (yes/no): </value>
+    </translation>
 
-  <translation>
-    <key>invalid_option</key>
-    <value>Invalid option, please try again.</value>
-  </translation>
+    <!-- Inquirer selection and menu messages -->
+    <translation>
+        <key>select_inquirer_id</key>
+        <value>Enter the ID of the inquirer: </value>
+    </translation>
+    <translation>
+        <key>returning_menu</key>
+        <value>Returning to the main menu.</value>
+    </translation>
+    <translation>
+        <key>no_inquirers</key>
+        <value>No inquirers found. Please create a new inquirer.</value>
+    </translation>
 
-  <translation>
-    <key>list_victims</key>
-    <value>List of Disaster Victims:</value>
-  </translation>
+    <!-- Database save and success messages -->
+    <translation>
+        <key>inquirer_created</key>
+        <value>Inquirer created successfully with ID: %d</value>
+    </translation>
+    <translation>
+        <key>error_save_inquirer</key>
+        <value>Failed to save inquirer: %s</value>
+    </translation>
 
-  <translation>
-    <key>input_firstname</key>
-    <value>Enter the person's first name:</value>
-  </translation>
+    <!-- toString format for Inquirer -->
+    <translation>
+        <key>inquirer_to_string</key>
+        <value>Inquirer [ID=%d, Name=%s %s, Phone=%s, Message=%s, IsVictim=%b]</value>
+    </translation>
+    <translation>
+        <key>inquirer_no_message</key>
+        <value>No message</value>
+    </translation>
 
-  <translation>
-    <key>input_lastname</key>
-    <value>Enter the person's last name:</value>
-  </translation>
+    <!-- Error messages -->
+    <translation>
+        <key>error_unrecoverable</key>
+        <value>An unrecoverable error has occurred. The application will exit.</value>
+    </translation>
+    <translation>
+        <key>error_adding_victim</key>
+        <value>An error occurred while adding the disaster victim.</value>
+    </translation>
+    <translation>
+        <key>invalid_input</key>
+        <value>Invalid input. Please try again.</value>
+    </translation>
+    <translation>
+        <key>max_retries_exceeded</key>
+        <value>Maximum number of retries exceeded. Operation cancelled.</value>
+    </translation>
+    
+    <!-- Report formats -->
+    <translation>
+        <key>report_person</key>
+        <value>%s entered the %s facility on %s.</value>
+    </translation>
 
-  <translation>
-    <key>no_results</key>
-    <value>No results found.</value>
-  </translation>
+    <!-- Supply related messages -->
+    <translation>
+        <key>select_supply</key>
+        <value>Select a supply ID to allocate: </value>
+    </translation>
+    <translation>
+        <key>select_recipient</key>
+        <value>Select a person ID to receive the supply: </value>
+    </translation>
+    <translation>
+        <key>invalid_supply</key>
+        <value>Invalid supply ID. Please try again.</value>
+    </translation>
+    <translation>
+        <key>supply_allocated</key>
+        <value>Supply has been allocated successfully.</value>
+    </translation>
+    
+    <!--Disaster Victim edit -->
+    <translation>
+        <key>edit_victim_menu</key>
+        <value>Edit Disaster Victim Details:</value>
+    </translation>
+    <translation>
+        <key>edit_name</key>
+        <value>Edit Name</value>
+    </translation>
+    <translation>
+        <key>edit_phone</key>
+        <value>Edit Phone Number</value>
+    </translation>
+    <translation>
+        <key>edit_dob</key>
+        <value>Edit Date of Birth</value>
+    </translation>
+    <translation>
+        <key>edit_gender</key>
+        <value>Edit Gender</value>
+    </translation>
+    <translation>
+        <key>edit_location</key>
+        <value>Edit Location</value>
+    </translation>
+    <translation>
+        <key>edit_family</key>
+        <value>Edit Family Group</value>
+    </translation>
+    <translation>
+        <key>return_main_menu</key>
+        <value>Return to Main Menu</value>
+    </translation>
+    <translation>
+        <key>select_option</key>
+        <value>Select an option (0-6):</value>
+    </translation>
+    <translation>
+        <key>invalid_option</key>
+        <value>Invalid option selected</value>
+    </translation>
+    <translation>
+        <key>update_successful</key>
+        <value>Victim details updated successfully</value>
+    </translation>
+    <translation>
+        <key>update_failed</key>
+        <value>Failed to update victim details</value>
+    </translation>
+    
+    <!-- Supply editing keys -->
+    <translation>
+        <key>input_supply_type</key>
+        <value>Enter the new supply type:</value>
+    </translation>
+    <translation>
+        <key>invalid_supply_type</key>
+        <value>Invalid supply type. Please try again.</value>
+    </translation>
+    <translation>
+        <key>input_supply_comments</key>
+        <value>Enter new comments for the supply (optional):</value>
+    </translation>
+    <translation>
+        <key>update_successful</key>
+        <value>Update successful.</value>
+    </translation>
+    <translation>
+        <key>update_failed</key>
+        <value>Failed to update the supply.</value>
+    </translation>
 
-  <translation>
-    <key>inquiry_logged</key>
-    <value>Inquiry successfully logged.</value>
-  </translation>
+    <!-- Supply allocation and viewing keys -->
+    <translation>
+        <key>select_supply</key>
+        <value>Please enter the supply ID:</value>
+    </translation>
+    <translation>
+        <key>invalid_supply</key>
+        <value>Invalid supply ID. Please try again.</value>
+    </translation>
+    <translation>
+        <key>allocate_to_person_or_location</key>
+        <value>Allocate supply to a person (enter 'p') or location (enter 'l'):</value>
+    </translation>
+    <translation>
+        <key>select_recipient</key>
+        <value>Enter the recipient's ID:</value>
+    </translation>
+    <translation>
+        <key>location_mismatch</key>
+        <value>The selected person's location does not match the supply's allocation criteria.</value>
+    </translation>
+    <translation>
+        <key>supply_allocated</key>
+        <value>Supply allocated successfully.</value>
+    </translation>
+    <translation>
+        <key>invalid_choice</key>
+        <value>Invalid choice. Please try again.</value>
+    </translation>
+    <translation>
+        <key>invalid_input</key>
+        <value>Invalid input. Please enter valid data.</value>
+    </translation>
+    <translation>
+        <key>error_allocating_supply</key>
+        <value>Error occurred while allocating the supply.</value>
+    </translation>
+    <translation>
+        <key>error_viewing_supplies</key>
+        <value>Error occurred while retrieving supplies.</value>
+    </translation>
+    <translation>
+        <key>enter_supply_id</key>
+        <value>Enter the Supply ID to edit: </value>
+    </translation>
+    <translation>
+        <key>invalid_supply_id</key>
+        <value>No supply found with that ID.</value>
+    </translation>
+    <translation>
+        <key>input_supply_type</key>
+        <value>Enter the new supply type: </value>
+    </translation>
+    <translation>
+        <key>invalid_supply_type</key>
+        <value>Invalid supply type. Please try again.</value>
+    </translation>
+    <translation>
+        <key>input_supply_comments</key>
+        <value>Enter new comments (optional): </value>
+    </translation>
+    <translation>
+        <key>edit_allocation_prompt</key>
+        <value>Do you want to update the allocation?</value>
+    </translation>
+    <translation>
+        <key>invalid_choice</key>
+        <value>Invalid choice. Please enter p for person, l for location, or n for no change.</value>
+    </translation>
+    <translation>
+        <key>update_successful</key>
+        <value>Supply updated successfully.</value>
+    </translation>
+    <translation>
+        <key>update_failed</key>
+        <value>Failed to update the supply.</value>
+    </translation>
+    <translation>
+        <key>invalid_input</key>
+        <value>Invalid input.</value>
+    </translation>
+    
+    <!-- Additional keys you might be using elsewhere: -->
+    <translation>
+        <key>select_recipient</key>
+        <value>Enter the recipient's ID: </value>
+    </translation>
+    <translation>
+        <key>select_location</key>
+        <value>Select a location by entering its ID: </value>
+    </translation>
+    
 </translations>

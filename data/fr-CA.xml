@@ -1,0 +1,457 @@
+<translations>
+    <!-- Main menu options -->
+    <translation>
+        <key>Welcome to the Disaster Relief Management System</key>
+        <value>Bienvenue dans le Système de Gestion de l'Aide aux Sinistrés</value>
+    </translation>
+    <translation>
+        <key>Please select an option from the menu below:</key>
+        <value>Veuillez sélectionner une option dans le menu ci-dessous :</value>
+    </translation>
+    <translation>
+        <key>Add a Disaster victim</key>
+        <value>Ajouter une victime du sinistre</value>
+    </translation>
+    <translation>
+        <key>View Disaster victim information</key>
+        <value>Voir les informations de la victime du sinistre</value>
+    </translation>
+    <translation>
+        <key>Edit Disaster victim information</key>
+        <value>Modifier les informations de la victime du sinistre</value>
+    </translation>    
+    <translation>
+        <key>Log an inquiry about a victim</key>
+        <value>Enregistrer une demande concernant une victime</value>
+    </translation>
+    <translation>
+        <key>View inquiries about victims</key>
+        <value>Voir les demandes concernant les victimes</value>
+    </translation>
+    <translation>
+        <key>Edit inquiries about victims</key>
+        <value>Modifier les demandes concernant les victimes</value>
+    </translation>
+    <translation>
+        <key>Allocate available supplies</key>
+        <value>Allouer des fournitures disponibles</value>
+    </translation>
+    <translation>
+        <key>View current supply inventory and allocations</key>
+        <value>Voir l'inventaire des fournitures actuelles et les allocations</value>
+    </translation>
+    <translation>
+        <key>Edit supply inventory and allocations</key>
+        <value>Modifier l'inventaire des fournitures et les allocations</value>
+    </translation>
+    <translation>
+        <key>Exit the system</key>
+        <value>Quitter le système</value>
+    </translation>
+    <translation>
+        <key>menu_prompt</key>
+        <value>Entrez votre choix : </value>
+    </translation>
+    <translation>
+        <key>exit_message</key>
+        <value>Merci d'utiliser le Système de Gestion de l'Aide aux Sinistrés.</value>
+    </translation>
+    <translation>
+        <key>invalid_choice</key>
+        <value>Choix invalide. Veuillez réessayer.</value>
+    </translation>
+    <translation>
+        <key>adding_victim_info</key>
+        <value>Ajout de la victime du sinistre...........</value>
+    </translation>    
+    <translation>
+        <key>viewing_victim_info</key>
+        <value>Consultation de la victime du sinistre...........</value>
+    </translation>
+    <translation>
+        <key>editing_victim_info</key>
+        <value>Modification de la victime du sinistre...........</value>
+    </translation>
+    <translation>
+        <key>loging_inquiry</key>
+        <value>Enregistrement de la demande...........</value>
+    </translation>
+    <translation>
+        <key>inquirer_not_found</key>
+        <value>Aucun demandeur valide sélectionné. Retour au menu principal.</value>
+    </translation>
+    <translation>
+        <key>viewing_inquiry</key>
+        <value>Consultation de la demande...........</value>
+    </translation>
+    <translation>
+        <key>editing_inquiry</key>
+        <value>Modification de la demande...........</value>
+    </translation>
+    <translation>
+        <key>allocating_supplies</key>
+        <value>Allocation des fournitures...</value>
+    </translation>
+    <translation>
+        <key>viewing_supplies</key>
+        <value>Consultation des fournitures...</value>
+    </translation>
+    <translation>
+        <key>editing_supplies</key>
+        <value>Modification des fournitures...</value>
+    </translation>    
+    <!-- Person information inputs -->
+    <translation>
+        <key>input_firstname</key>
+        <value>Entrez le prénom de la personne : </value>
+    </translation>
+    <translation>
+        <key>input_lastname</key>
+        <value>Entrez le nom de famille de la personne : </value>
+    </translation>
+    <translation>
+        <key>input_phone</key>
+        <value>Entrez le numéro de téléphone de la personne : </value>
+    </translation>
+    <translation>
+        <key>input_dob</key>
+        <value>Entrez la date de naissance de la personne (AAAA-MM-JJ) : </value>
+    </translation>
+    <translation>
+        <key>select_gender</key>
+        <value>Sélectionnez le sexe de la personne : </value>
+    </translation>
+    <translation>
+        <key>gender_man</key>
+        <value>Homme</value>
+    </translation>
+    <translation>
+        <key>gender_woman</key>
+        <value>Femme</value>
+    </translation>
+    <translation>
+        <key>gender_nb</key>
+        <value>Personne non-binaire</value>
+    </translation>
+    <translation>
+        <key>available_locations</key>
+        <value>Veuillez choisir le lieu ci-dessous </value>
+    </translation>
+    <!-- Input validation error messages -->
+    <translation>
+        <key>invalid_firstname</key>
+        <value>Prénom invalide. Veuillez réessayer.</value>
+    </translation>
+    <translation>
+        <key>invalid_lastname</key>
+        <value>Nom de famille invalide. Veuillez réessayer.</value>
+    </translation>
+    <translation>
+        <key>invalid_phone_format</key>
+        <value>Numéro de téléphone invalide. Doit comporter exactement 10 chiffres.</value>
+    </translation>
+    <translation>
+        <key>invalid_yes_no</key>
+        <value>Veuillez entrer 'oui' ou 'non'.</value>
+    </translation>
+    <translation>
+        <key>invalid_input</key>
+        <value>Entrée invalide. Veuillez réessayer.</value>
+    </translation>
+    <translation>
+        <key>invalid_gender</key>
+        <value>Sélection de sexe invalide. Veuillez réessayer.</value>
+    </translation>
+    <translation>
+        <key>invalid_dob</key>
+        <value>Format de date invalide. Veuillez utiliser le format AAAA-MM-JJ.</value>
+    </translation>
+    <translation>
+        <key>invalid_phone</key>
+        <value>Numéro de téléphone invalide. Veuillez entrer le bon numéro à 10 chiffres.</value>
+    </translation>
+    
+    <!-- Comment section -->
+    <translation>
+        <key>input_comments</key>
+        <value>Entrez des commentaires concernant cette victime du sinistre (appuyez sur Entrée sur une ligne vide pour terminer) :</value>
+    </translation>
+    <translation>
+        <key>multiline_instruction</key>
+        <value>Tapez vos commentaires, puis appuyez sur Entrée sur une ligne vide pour terminer.</value>
+    </translation>
+    <translation>
+        <key>no_comments</key>
+        <value>Aucun commentaire fourni.</value>
+    </translation>
+
+    <!-- Family group options -->
+    <translation>
+        <key>join_family_group</key>
+        <value>Souhaitez-vous ajouter cette personne à un groupe familial existant ? (o/n) : </value>
+    </translation>
+    <translation>
+        <key>select_family_group</key>
+        <value>Sélectionnez un ID de groupe familial : </value>
+    </translation>
+    <translation>
+        <key>invalid_family_group</key>
+        <value>ID de groupe familial invalide. Utilisation d'un nouveau groupe familial. Le numéro du groupe familial est juste après le groupe actuel.</value>
+    </translation>
+    <translation>
+        <key>invalid_y_n</key>
+        <value>Entrée invalide. Veuillez entrer 'o' ou 'n'.</value>
+    </translation>
+    <translation>
+        <key>no_family_group</key>
+        <value>Aucun groupe familial assigné</value>
+    </translation>
+
+    <!-- Location related messages -->
+    <translation>
+        <key>select_location</key>
+        <value>Sélectionnez un ID de lieu : </value>
+    </translation>
+    <translation>
+        <key>invalid_location</key>
+        <value>ID de lieu invalide. Veuillez réessayer.</value>
+    </translation>
+
+    <!-- Table headers and formatting -->
+    <translation>
+        <key>victim_details_header</key>
+        <value>DÉTAILS DE LA VICTIME DU SINISTRE</value>
+    </translation>
+    <translation>
+        <key>victim_list_header</key>
+        <value>LISTE DES VICTIMES DU SINISTRE ENREGISTRÉES</value>
+    </translation>
+    <translation>
+        <key>table_id</key>
+        <value>ID</value>
+    </translation>
+    <translation>
+        <key>table_name</key>
+        <value>Nom</value>
+    </translation>
+    <translation>
+        <key>table_phone</key>
+        <value>Téléphone</value>
+    </translation>
+    <translation>
+        <key>table_dob</key>
+        <value>Date de naissance</value>
+    </translation>
+    <translation>
+        <key>table_location</key>
+        <value>Lieu</value>
+    </translation>
+    <translation>
+        <key>table_gender</key>
+        <value>Genre</value>
+    </translation>
+    <translation>
+        <key>table_family_group</key>
+        <value>Groupe familial</value>
+    </translation>
+
+    <!-- Inquiries -->
+    <translation>
+        <key>inquiry_list_header</key>
+        <value>LISTE DES DEMANDES</value>
+    </translation>
+    <translation>
+        <key>inquiry_id</key>
+        <value>ID de la demande</value>
+    </translation>
+    <translation>
+        <key>inquiry_description</key>
+        <value>Description de la demande</value>
+    </translation>
+    <translation>
+        <key>inquiry_victim_name</key>
+        <value>Nom de la victime</value>
+    </translation>
+    <translation>
+        <key>inquiry_date</key>
+        <value>Date de la demande</value>
+    </translation>
+    <translation>
+        <key>inquiry_status</key>
+        <value>État de la demande</value>
+    </translation>
+    <translation>
+        <key>inquiry_update</key>
+        <value>Mise à jour de la demande</value>
+    </translation>
+    <translation>
+        <key>inquiry_notes</key>
+        <value>Notes de la demande</value>
+    </translation>
+    <translation>
+        <key>inquiry_open</key>
+        <value>Ouvert</value>
+    </translation>
+    <translation>
+        <key>inquiry_closed</key>
+        <value>Fermé</value>
+    </translation>
+    
+    <!-- Supplies -->
+    <translation>
+        <key>supplies_list_header</key>
+        <value>LISTE DES FOURNITURES</value>
+    </translation>
+    <translation>
+        <key>supplies_id</key>
+        <value>ID de la fourniture</value>
+    </translation>
+    <translation>
+        <key>supplies_name</key>
+        <value>Nom de la fourniture</value>
+    </translation>
+    <translation>
+        <key>supplies_quantity</key>
+        <value>Quantité</value>
+    </translation>
+    <translation>
+        <key>supplies_expiry</key>
+        <value>Date d'expiration</value>
+    </translation>
+    <translation>
+        <key>supplies_allocation</key>
+        <value>Allocation</value>
+    </translation>
+    <translation>
+        <key>supplies_allocate</key>
+        <value>Allouer des fournitures</value>
+    </translation>
+    <translation>
+        <key>supplies_update</key>
+        <value>Mettre à jour les fournitures</value>
+    </translation>
+    
+    <!-- Supply Allocation -->
+    <translation>
+        <key>allocation_list_header</key>
+        <value>LISTE DES ALLOCATIONS</value>
+    </translation>
+    <translation>
+        <key>allocation_victim</key>
+        <value>Victime</value>
+    </translation>
+    <translation>
+        <key>allocation_supply</key>
+        <value>Fourniture</value>
+    </translation>
+    <translation>
+        <key>allocation_quantity</key>
+        <value>Quantité allouée</value>
+    </translation>
+    <translation>
+        <key>allocation_date</key>
+        <value>Date d'allocation</value>
+    </translation>
+    <translation>
+        <key>allocation_notes</key>
+        <value>Notes sur l'allocation</value>
+    </translation>
+
+    <!-- Medical Records -->
+    <translation>
+        <key>medical_record_list_header</key>
+        <value>LISTE DES DOSSIERS MÉDICAUX</value>
+    </translation>
+    <translation>
+        <key>medical_record_id</key>
+        <value>ID du dossier médical</value>
+    </translation>
+    <translation>
+        <key>medical_record_victim_name</key>
+        <value>Nom de la victime</value>
+    </translation>
+    <translation>
+        <key>medical_record_conditions</key>
+        <value>Conditions médicales</value>
+    </translation>
+    <translation>
+        <key>medical_record_treatment</key>
+        <value>Traitement fourni</value>
+    </translation>
+    <translation>
+        <key>medical_record_notes</key>
+        <value>Notes médicales</value>
+    </translation>
+    
+    <!-- Date and Time -->
+    <translation>
+        <key>current_date</key>
+        <value>Date actuelle</value>
+    </translation>
+    <translation>
+        <key>current_time</key>
+        <value>Heure actuelle</value>
+    </translation>
+    <translation>
+        <key>date_format</key>
+        <value>AAAA-MM-JJ</value>
+    </translation>
+    <translation>
+        <key>time_format</key>
+        <value>HH:MM:SS</value>
+    </translation>
+
+    <!-- Error Messages -->
+    <translation>
+        <key>database_error</key>
+        <value>Erreur de connexion à la base de données. Veuillez réessayer plus tard.</value>
+    </translation>
+    <translation>
+        <key>input_error</key>
+        <value>Erreur d'entrée. Veuillez vérifier les informations saisies et réessayer.</value>
+    </translation>
+    <translation>
+        <key>file_error</key>
+        <value>Erreur lors de l'ouverture du fichier. Veuillez vérifier le fichier et réessayer.</value>
+    </translation>
+    <translation>
+        <key>file_not_found</key>
+        <value>Le fichier spécifié est introuvable. Veuillez vérifier le chemin du fichier.</value>
+    </translation>
+    <translation>
+        <key>unexpected_error</key>
+        <value>Une erreur inattendue s'est produite. Veuillez réessayer plus tard.</value>
+    </translation>
+    
+    <!-- Confirmation Messages -->
+    <translation>
+        <key>data_saved_successfully</key>
+        <value>Données enregistrées avec succès !</value>
+    </translation>
+    <translation>
+        <key>data_updated_successfully</key>
+        <value>Données mises à jour avec succès !</value>
+    </translation>
+    <translation>
+        <key>data_deleted_successfully</key>
+        <value>Données supprimées avec succès !</value>
+    </translation>
+    <translation>
+        <key>action_successful</key>
+        <value>Action réussie !</value>
+    </translation>
+    <translation>
+        <key>action_failed</key>
+        <value>Action échouée. Veuillez réessayer.</value>
+    </translation>
+    
+    <!-- Miscellaneous -->
+    <translation>
+        <key>exit_confirmation</key>
+        <value>Êtes-vous sûr de vouloir quitter le système ? (o/n)</value>
+    </translation>
+    <translation>
+        <key>continue_prompt</key>
+        <value>Voulez-vous continuer ? (o/n)</value>
+    </translation>
+</>
