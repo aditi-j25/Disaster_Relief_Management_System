@@ -1,0 +1,386 @@
+@startuml Disaster Relief Management System
+
+' Set visibility style to use text symbols
+skinparam classAttributeIconSize 0
+
+' Color scheme and styling
+!define MAIN_COLOR #4B80AF
+!define INTERFACE_COLOR #84A9D1
+!define ABSTRACT_COLOR #A9CCE3
+!define CLASS_COLOR #D6EAF8
+skinparam class {
+  BackgroundColor CLASS_COLOR
+  ArrowColor MAIN_COLOR
+  BorderColor MAIN_COLOR
+}
+skinparam interface {
+  BackgroundColor INTERFACE_COLOR
+  ArrowColor MAIN_COLOR
+  BorderColor MAIN_COLOR
+}
+
+' Interfaces
+interface UserInterface {
+  + displayMainMenu(): void
+  + displayError(message: String): void
+  + showSuccess(message: String): void
+  + showPrompt(message: String): void
+  + getInput(): String
+  + viewDisasterVictimInfo(): void
+}
+
+interface DatabaseConnector {
+  + getConnection(): Connection
+  + closeConnection(): void
+  + getPersons(): Map<Integer, Person>
+  + getLocations(): Map<Integer, Location>
+  + getSupplies(): Map<Integer, Supply>
+  + getInquiries(): Map<Integer, Inquiry>
+  + getMedicalRecords(): Map<Integer, MedicalRecord>
+  + getFamilyGroups(): Map<Integer, FamilyGroup>
+  + loadData(): void
+  + cleanupExpiredWater(): void
+  {static} + logError(message: String, e: Exception): void
+}
+
+interface RealDatabaseConnection extends DatabaseConnector {
+  + executeCustomQuery(sqlQuery: String): String
+  + updateRecord(tableName: String, id: int, columnName: String, newValue: Object): boolean
+  + loadAssociations(): void
+}
+
+' Classes
+class Person {
+  - id: int
+  - firstName: String
+  - lastName: String
+  - phoneNumber: String
+  - gender: String
+  - dateOfBirth: String
+  - allocatedSupplies: ArrayList<Supply>
+  + Person(firstName: String, lastName: String, phoneNumber: String)
+  + Person()
+  + getId(): int
+  + setId(id: int): void
+  + getFirstName(): String
+  + setFirstName(firstName: String): void
+  + getLastName(): String
+  + setLastName(lastName: String): void
+  + getPhoneNumber(): String
+  + setPhoneNumber(phoneNumber: String): void
+  + getFullName(): String
+  + getGender(): String
+  + setGender(gender: String): void
+  + getDateOfBirth(): String
+  + setDateOfBirth(dateOfBirth: String): void
+  + addAllocatedSupply(supply: Supply): void
+  + getAllocatedSupplies(): ArrayList<Supply>
+  {static} + logError(e: Exception): void
+  + toString(): String
+  + equals(obj: Object): boolean
+}
+
+class DisasterVictim extends Person {
+  - disasterType: String
+  + DisasterVictim(firstName: String, lastName: String, phoneNumber: String, disasterType: String)
+  + getDisasterType(): String
+  + setDisasterType(disasterType: String): void
+  + addDisasterVictim(ui: UserInterfaceImplied): void
+  - printVictimTable(victim: DisasterVictim, locationId: int, familyGroupId: int, comments: String, ui: UserInterfaceImplied): void
+  - printTableRow(title: String, value: String, ui: UserInterfaceImplied): void
+  - selectGender(ui: UserInterfaceImplied): String
+  - selectFamilyGroup(ui: UserInterfaceImplied): int
+  - displayFamilyGroups(ui: UserInterfaceImplied): void
+  + selectLocation(ui: UserInterfaceImplied): int
+  - displayLocations(ui: UserInterfaceImplied): void
+  - savePersonToDatabase(person: Person, gender: String, familyGroupId: int, locationId: int, comments: String, db: DatabaseConnector): int
+  {static} + editDisasterVictim(ui: UserInterfaceImplied): void
+  + performEdit(ui: UserInterfaceImplied): void
+  - updateName(ui: UserInterfaceImplied): void
+  - updatePhone(ui: UserInterfaceImplied): void
+  - updateDateOfBirth(ui: UserInterfaceImplied): void
+  - updateGender(ui: UserInterfaceImplied): void
+  - updateLocation(ui: UserInterfaceImplied): void
+  - updateFamilyGroup(ui: UserInterfaceImplied): void
+  - updateDatabase(ui: UserInterfaceImplied): void
+  + toString(): String
+}
+
+class Inquirer extends Person {
+  - inquiryMessage: String
+  - isVictim: boolean
+  + Inquirer(firstName: String, lastName: String, phoneNumber: String, inquiryMessage: String, isVictim: boolean)
+  + Inquirer()
+  + getInquiryMessage(): String
+  + setInquiryMessage(inquiryMessage: String): void
+  + isVictim(): boolean
+  + setVictim(isVictim: boolean): void
+  + selectInquirer(ui: UserInterfaceImplied): Inquirer
+  + displayInquirerList(ui: UserInterfaceImplied, persons: Map<Integer, Person>): void
+  + createInquirer(ui: UserInterfaceImplied): Inquirer
+  - saveInquirerToDatabase(ui: UserInterfaceImplied, inquirer: Inquirer): int
+  + toString(): String
+}
+
+class FamilyGroup extends Person {
+  - familyMembers: List<Person>
+  + FamilyGroup(firstName: String, lastName: String, phoneNumber: String)
+  + addFamilyMember(member: Person): void
+  {static} + createNewFamilyGroup(ui: UserInterfaceImplied): int
+  + getFamilyMembers(): List<Person>
+  + removeFamilyMember(member: Person): void
+  + getFamilySize(): int
+  + toString(): String
+}
+
+class Supply {
+  - id: int
+  - type: String
+  - comments: String
+  + Supply(type: String, id: int)
+  + Supply(type: String)
+  + Supply()
+  + Supply(id: int)
+  + setId(id: int): void
+  + getId(): int
+  + getType(): String
+  + setType(type: String): void
+  + getComments(): String
+  + setComments(comments: String): void
+  + allocateSupplies(ui: UserInterfaceImplied): void
+  + viewSupplies(ui: UserInterfaceImplied): void
+  {static} + editSupply(ui: UserInterfaceImplied): void
+  + updateDatabase(ui: UserInterfaceImplied): void
+  + selectPerson(prompt: String, ui: UserInterfaceImplied): int
+  + checkLocationMatch(supplyId: int, personId: int, db: DatabaseConnector): boolean
+  + allocateSupplyToPerson(supplyId: int, personId: int, db: DatabaseConnector): void
+  + allocateSupplyToLocation(supplyId: int, locationId: int, db: DatabaseConnector): void
+  - selectLocation(ui: UserInterfaceImplied): int
+}
+
+class Water extends Supply {
+  - allocationDate: LocalDateTime
+  {static} - LOGGER: Logger
+  + Water()
+  + setAllocationDate(date: LocalDateTime): void
+  + getAllocationDate(): LocalDateTime
+  + isExpired(): boolean
+  + allocateToPersonWithExpiry(personId: int, db: DatabaseConnector): void
+  + allocateToLocation(locationId: int, db: DatabaseConnector): void
+  {static} + cleanupExpiredWater(db: DatabaseConnector): int
+}
+
+class Blanket extends Supply {
+  + Blanket()
+}
+
+class Cot extends Supply {
+  + Cot(location: String)
+  + setComments(comments: String): void
+}
+
+class PersonalBelonging extends Supply {
+  + PersonalBelonging(description: String)
+  + setComments(comments: String): void
+}
+
+class Location {
+  - name: String
+  - address: String
+  - occupants: ArrayList<DisasterVictim>
+  - supplies: ArrayList<Supply>
+  + Location(name: String, address: String)
+  + getName(): String
+  + setName(name: String): void
+  + getAddress(): String
+  + setAddress(address: String): void
+  + getOccupants(): ArrayList<DisasterVictim>
+  + setOccupants(occupants: ArrayList<DisasterVictim>): void
+  + getSupplies(): ArrayList<Supply>
+  + setSupplies(supplies: ArrayList<Supply>): void
+  + addOccupant(occupant: DisasterVictim): void
+  + removeOccupant(occupant: DisasterVictim): void
+  + addSupply(supply: Supply): void
+  + removeSupply(supply: Supply): void
+}
+
+class Inquiry {
+  - inquirer: Inquirer
+  - inquiryMessage: String
+  - id: int
+  - seekingId: int
+  + Inquiry(inquirer: Inquirer, inquiryMessage: String)
+  + setId(id: int): void
+  + getId(): int
+  + getInquirer(): Inquirer
+  + getInquiryMessage(): String
+  + setSeekingId(seekingId: int): void
+  + getSeekingId(): int
+  + logInquiry(ui: UserInterfaceImplied): void
+  + editInquiry(ui: UserInterfaceImplied): void
+  - updateDatabase(ui: UserInterfaceImplied): void
+  - saveInquiryToDatabase(inquiry: Inquiry, db: DatabaseConnector, ui: UserInterfaceImplied): int
+  - selectPerson(promptKey: String, ui: UserInterfaceImplied): int
+  - savePersonToDatabase(person: Person, gender: String, familyGroupId: int, locationId: int, db: DatabaseConnector): int
+  - selectLocation(ui: UserInterfaceImplied): int
+  + viewInquiries(ui: UserInterfaceImplied): void
+  + toString(): String
+}
+
+class MedicalRecord {
+  - location: Location
+  - treatmentDetails: String
+  - dateOfTreatment: String
+  + MedicalRecord(location: Location, treatmentDetails: String, dateOfTreatment: String)
+  + getLocation(): Location
+  + setLocation(location: Location): void
+  + getTreatmentDetails(): String
+  + setTreatmentDetails(treatmentDetails: String): void
+  + getDateOfTreatment(): String
+  + setDateOfTreatment(dateOfTreatment: String): void
+  - isValidDateFormat(date: String): boolean
+}
+
+class LanguageSupport {
+  - languageCode: String
+  - translations: Map<String, String>
+  + LanguageSupport(languageCode: String)
+  - loadLanguageFile(isFallback: boolean): void
+  + getText(key: String): String
+  + setLanguageCode(languageCode: String): void
+  + getLanguageCode(): String
+  + chooseLanguage(): void
+}
+
+class UserInterfaceImplied implements UserInterface {
+  - scanner: Scanner
+  - languageSupport: LanguageSupport
+  - dbConnection: DatabaseConnector
+  {static} - MAX_RETRIES: int
+  - persons: Map<Integer, Person>
+  - locations: Map<Integer, Location>
+  - supplies: Map<Integer, Supply>
+  - inquiries: Map<Integer, Inquiry>
+  - medicalRecords: Map<Integer, MedicalRecord>
+  - familyGroups: Map<Integer, FamilyGroup>
+  + UserInterfaceImplied()
+  + UserInterfaceImplied(languageSupport: LanguageSupport)
+  + setDatabaseConnection(dbConnection: DatabaseConnector): void
+  + run(): void
+  - processChoice(choice: String): boolean
+  + displayMainMenu(): void
+  + viewDisasterVictimInfo(): void
+  + getMultiLineInput(prompt: String): String
+  + getValidatedInput(prompt: String, regex: String, errorMessage: String): String
+  + getInput(): String
+  + showPrompt(message: String): void
+  + showSuccess(message: String): void
+  + displayError(message: String): void
+  + logError(message: String, e: Exception): void
+  + getLanguageSupport(): LanguageSupport
+  + getDbConnection(): DatabaseConnector
+  + getPersons(): Map<Integer, Person>
+  + getLocations(): Map<Integer, Location>
+  + getSupplies(): Map<Integer, Supply>
+  + getInquiries(): Map<Integer, Inquiry>
+  + getMedicalRecords(): Map<Integer, MedicalRecord>
+  + getFamilyGroups(): Map<Integer, FamilyGroup>
+  + getMaxRetries(): int
+}
+
+class DatabaseConnection implements RealDatabaseConnection {
+  {static} - instance: DatabaseConnection
+  - connection: Connection
+  {static} - URL: String
+  {static} - USER: String
+  {static} - PASSWORD: String
+  - isClosed: boolean
+  - persons: Map<Integer, Person>
+  - locations: Map<Integer, Location>
+  - supplies: Map<Integer, Supply>
+  - inquiries: Map<Integer, Inquiry>
+  - medicalRecords: Map<Integer, MedicalRecord>
+  - familyGroups: Map<Integer, FamilyGroup>
+  - DatabaseConnection()
+  {static} + getInstance(): DatabaseConnection
+  + getConnection(): Connection
+  + closeConnection(): void
+  + loadData(): void
+  + loadAssociations(): void
+  + cleanupExpiredWater(): void
+  {static} + logError(message: String, e: Exception): void
+  + getPersons(): Map<Integer, Person>
+  + getLocations(): Map<Integer, Location>
+  + getSupplies(): Map<Integer, Supply>
+  + getInquiries(): Map<Integer, Inquiry>
+  + getMedicalRecords(): Map<Integer, MedicalRecord>
+  + getFamilyGroups(): Map<Integer, FamilyGroup>
+  + executeCustomQuery(sqlQuery: String): String
+  + updateRecord(tableName: String, id: int, columnName: String, newValue: Object): boolean
+}
+
+' Add MockDatabaseConnector class
+class MockDatabaseConnector implements DatabaseConnector {
+  - persons: Map<Integer, Person>
+  - locations: Map<Integer, Location>
+  - supplies: Map<Integer, Supply>
+  - inquiries: Map<Integer, Inquiry>
+  - medicalRecords: Map<Integer, MedicalRecord>
+  - familyGroups: Map<Integer, FamilyGroup>
+  + MockDatabaseConnector()
+  + getConnection(): Connection
+  + closeConnection(): void
+  + loadData(): void
+  + cleanupExpiredWater(): void
+  {static} + logError(message: String, e: Exception): void
+  + getPersons(): Map<Integer, Person>
+  + getLocations(): Map<Integer, Location>
+  + getSupplies(): Map<Integer, Supply>
+  + getInquiries(): Map<Integer, Inquiry>
+  + getMedicalRecords(): Map<Integer, MedicalRecord>
+  + getFamilyGroups(): Map<Integer, FamilyGroup>
+}
+
+' Add MockDatabaseConnection class
+class MockDatabaseConnection extends MockDatabaseConnector implements RealDatabaseConnection {
+  {static} - instance: MockDatabaseConnection
+  - isClosed: boolean
+  - MockDatabaseConnection()
+  {static} + getInstance(): MockDatabaseConnection
+  + executeCustomQuery(sqlQuery: String): String
+  + updateRecord(tableName: String, id: int, columnName: String, newValue: Object): boolean
+  + loadAssociations(): void
+}
+
+class Main {
+  + Main()
+  {static} + main(args: String[]): void
+}
+
+' Add new relationships for the mock classes
+note "Singleton Pattern" as N2
+MockDatabaseConnection .. N2
+UserInterfaceImplied "1" -- "1" MockDatabaseConnector : can use >
+
+' Relationships and cardinalities
+DisasterVictim "0..*" -- "0..1" Location : is located at >
+DisasterVictim "0..*" -- "0..1" FamilyGroup : belongs to >
+Location "1" -- "0..*" Supply : contains >
+Person "1" -- "0..*" Supply : has allocated >
+Inquiry "0..*" -- "1" Inquirer : is made by >
+Inquiry "0..*" -- "1" Person : is about >
+MedicalRecord "0..*" -- "1" Location : provided at >
+UserInterfaceImplied "1" -- "1" LanguageSupport : uses >
+UserInterfaceImplied "1" -- "1" DatabaseConnector : uses >
+DatabaseConnection "1" -- "0..*" Person : manages >
+DatabaseConnection "1" -- "0..*" Location : manages >
+DatabaseConnection "1" -- "0..*" Supply : manages >
+DatabaseConnection "1" -- "0..*" Inquiry : manages >
+DatabaseConnection "1" -- "0..*" MedicalRecord : manages >
+DatabaseConnection "1" -- "0..*" FamilyGroup : manages >
+
+' Notes for design patterns
+note "Singleton Pattern" as N1
+DatabaseConnection .. N1
+
+@enduml
